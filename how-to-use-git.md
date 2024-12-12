@@ -23,5 +23,5 @@ git clone <target-repo>
 git clone https://github.com/MingFei2001/notes.git
 ```
 
-## Pull&Fetch
+## Pull & Fetch
 > update the repo
