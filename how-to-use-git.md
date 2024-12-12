@@ -5,7 +5,7 @@
 
 ## Basic action
 + [clone](#clone)
-+ [pull & fetch](#pullfetch)
++ [pull & fetch](#pull--fetch)
 + stage
 + commit
 + push
