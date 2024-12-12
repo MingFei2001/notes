@@ -5,7 +5,7 @@
 
 ## Basic action
 + [clone](#clone)
-+ pull/fetch
++ [pull/fetch](#pull/fetch)
 + stage
 + commit
 + push
@@ -23,5 +23,5 @@ git clone <target-repo>
 git clone https://github.com/MingFei2001/notes.git
 ```
 
-## Pull
+## Pull/Fetch
 > update the repo
