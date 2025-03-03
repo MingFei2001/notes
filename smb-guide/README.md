@@ -159,7 +159,7 @@ getent group smbgroup
 ```
 Ensure user appears in the output alongside other authorized users.
 
-### 5️⃣ Test SMB Access for the New Useer
+### 5️⃣ Test SMB Access for the New User
 List available shares:
 ```bash
 smbclient -L //localhost -U user
