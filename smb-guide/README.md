@@ -132,6 +132,44 @@ getent group smbgroup
 sudo deluser <username> smbgroup
 ```
 
+## ➕ Adding a New SMB User  
+To add a new user (e.g., **user**) to the SMB server:  
+
+### 1️⃣ Create the User (If Not Already Exists)  
+If the user does not already exist on the system, create it:  
+```bash
+sudo adduser user
+```
+Follow the prompts to set a system password (this is separate from the SMB password).
+
+### 2️⃣ Add the User to the SMB Group
+```bash
+sudo usermod -aG smbgroup user
+```
+
+### 3️⃣ Set an SMB Password
+```bash
+sudo smbpasswd -a user
+```
+You will be prompted to set an SMB password—this is the password user will use to access the shared folder.
+
+### 4️⃣ Verify the User is in the SMB Group
+```bash
+getent group smbgroup
+```
+Ensure user appears in the output alongside other authorized users.
+
+### 5️⃣ Test SMB Access for the New Useer
+List available shares:
+```bash
+smbclient -L //localhost -U user
+```
+Try accessing themfshare:
+```bash
+smbclient //localhost/themfshare -U user
+ls
+```
+
 ---
 
 ## 🎉 Conclusion
