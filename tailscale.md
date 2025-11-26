@@ -36,7 +36,7 @@ Here are some basic commands to manage your Tailscale connection after the initi
     ```
 *   **Reset configuration:** Reset all local Tailscale configurations to their default values (e.g., advertised routes, exit node settings). This does not log you out.
     ```bash
-    sudo tailscale up --reset
+    sudo tailscale set --reset
     ```
 *   **Logout:** Disconnect and completely remove the device from your tailnet, invalidating its authentication key. You will need to re-authenticate if you wish to rejoin.
     ```bash
