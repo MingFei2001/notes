@@ -34,6 +34,10 @@ Here are some basic commands to manage your Tailscale connection after the initi
     ```bash
     sudo tailscale up
     ```
+*   **Restart Service:** Restart the Tailscale daemon (useful for applying some configuration changes or troubleshooting).
+    ```bash
+    sudo systemctl restart tailscaled
+    ```
 *   **Reset configuration:** Reset all local Tailscale configurations to their default values (e.g., advertised routes, exit node settings). This does not log you out.
     ```bash
     sudo tailscale set --reset
