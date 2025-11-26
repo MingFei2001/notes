@@ -55,18 +55,6 @@ Here are some basic commands to manage your Tailscale connection after the initi
 
 This section covers setting up your Tailscale client for specific roles and common options.
 
-### Subnet Router (Operator)
-
-To configure your Linux machine as a Subnet Router, allowing other Tailscale devices to access your local network, you can use the `--advertise-routes` flag with `tailscale up`. Replace `192.168.1.0/24` with your actual subnet(s).
-
-```bash
-sudo tailscale up --advertise-routes=192.168.1.0/24
-```
-
-After running this command, you'll need to enable the advertised routes in your [Tailscale admin console](https://login.tailscale.com/admin/settings/network) under "Subnet routes".
-
-For details on enabling IP forwarding, which might be necessary for a subnet router, refer to the [Tailscale documentation on Subnet Routers](https://tailscale.com/kb/1075/subnet-routers).
-
 ### Exit Node (Operator)
 
 To set up your Linux machine as an Exit Node, allowing other Tailscale devices to route all their internet traffic through it, use the `--advertise-exit-node` flag.
@@ -82,3 +70,15 @@ tailscale up --exit-node <your-linux-machine-name>
 ```
 
 You'll also need to enable the exit node in your [Tailscale admin console](https://login.tailscale.com/admin/settings/network) under "Exit nodes".
+
+### Subnet Router (Operator)
+
+To configure your Linux machine as a Subnet Router, allowing other Tailscale devices to access your local network, you can use the `--advertise-routes` flag with `tailscale up`. Replace `192.168.1.0/24` with your actual subnet(s).
+
+```bash
+sudo tailscale up --advertise-routes=192.168.1.0/24
+```
+
+After running this command, you'll need to enable the advertised routes in your [Tailscale admin console](https://login.tailscale.com/admin/settings/network) under "Subnet routes".
+
+For details on enabling IP forwarding, which might be necessary for a subnet router, refer to the [Tailscale documentation on Subnet Routers](https://tailscale.com/kb/1075/subnet-routers).
