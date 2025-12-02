@@ -1,6 +1,6 @@
 # 🌍 Poor Man's Proxy 🚀
 
-## 🔹 Overview
+## Overview
 
 A simple guide to setting up an SSH tunnel as a SOCKS5 proxy to bypass geo-restrictions and encrypt your internet traffic. This covers Linux desktops and Android devices.
 
