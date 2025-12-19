@@ -1,6 +1,15 @@
 # Setting up Copyparty on Debian
 A quick guide to install and configure Copyparty on a Debian system, including setting up a reverse proxy with Nginx.
 
+## Base Software Stack
+
+- OS: Debian
+  - You can setup the system with separated `/home` partition during installation.
+- File Browser: Copyparty
+  - Support various advanced file server features like resume after pause download, user permission and WebDAV.
+- Nginx
+  - Reverse proxy for Copyparty, user can access Copyparty through IP address without knowing the port number.
+
 ## Installing Copyparty
 We will be using pipx to install Copyparty as a global application.
 
@@ -111,7 +120,7 @@ Verify that Copyparty and Nginx are running correctly and accessible from your b
 ## Troubleshooting
 Resolve common issues that may arise during the setup of Copyparty or Nginx.
 
-- **Permissions:** Ensure `wwtadmin` user has the correct permissions for `/home/user`.
+- **Permissions:** Ensure user has the correct permissions for the Copyparty directory.
 
 1. To restart Nginx:
 ```bash
