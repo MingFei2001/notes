@@ -16,7 +16,7 @@ Thanks to the following kind folks! \
 |[\^0-9]|Negative match - any char that are not in the list |A, B, C |
 
 ## Occurences
-> Anythihg that might repeats, i.e. IP address
+> Anything that might repeats, i.e. IP address
 
 |regex|description|example|
 |---|---|---|
@@ -25,3 +25,5 @@ Thanks to the following kind folks! \
 |+|match 1 or more of the same pattern| a+ -> a, aa, aaa ... |
 |*|match 0 or more of the same pattern| a* -> `none` or a, aa ... |
 |?|make pattern optional| colou?r -> color / colour |
+
+## Escape Characters
