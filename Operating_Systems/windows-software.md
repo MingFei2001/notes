@@ -1,4 +1,5 @@
 # Windows Software I Use
+> Most should be able to install through winget
 
 ## System Management
 
