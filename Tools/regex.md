@@ -16,6 +16,8 @@ Thanks to the kind folks below!
 [0-9]|All numbers| 1, 2, 3 |
 |[aeiou]|Custom list of char to match| a, e, i, o, u |
 |[\^0-9]|Negative match - any char that are not in the list |A, B, C |
+|\xxx|Octal character - allow matching by octal value, legacy usage avoid unless necessary|`\101` -> `A`|
+|\xhh|Hex Character - allow matching by hexadecimal value, suprisingly common|`\41` -> `A`|
 
 ## Occurences
 > Anything that might repeats, i.e. IP address
