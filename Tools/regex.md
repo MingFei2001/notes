@@ -36,6 +36,7 @@ Thanks to the kind folks below!
 |regex|description|example|
 |---|---|---|
 |`\`|escape any character that comes after it including itself|`\+` will match char `+`|
+|\Q and \E|Begin and end of literal - turn off special char parsing and match everything in between as is|`\Qabc.def*\E` -> `.` and `*` got parse as char not patterns -> match only `abc.def*`|
 
 ## Meta Characters
 > Shortcut for long commands, usually starts with escape character
