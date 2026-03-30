@@ -55,3 +55,17 @@ Thanks to the kind folks below!
 |\Z|end of the input, not multiline|aa\Z -> baa, zzaaa, aa|
 |\b|matches word boundaries| \bcat\b -> strictly `cat`, no `cats`|
 |\B|matches non-word boundaries| \Bcat\B -> `concatenate`, strictly no `cat`|
+
+## Assertion
+> Check for condition but do not make modification
+
+|regex|description|example|
+|---|---|---|
+|?=|Lookahead - match only if what follows matches|`\d(?=kg)` -> matches `5 in 5kg` not `5 in 5lbs`|
+|?!|Negative Lookahead - match only if what follows doesn't match|`\d(?!kg)` -> matches `5 in 5lbs` not `5 in 5kg`|
+|?<=|Lookbehind - match only if what before matches|`(?<=\$)\d+` -> matches `100 in $100` not `100 in 100$`|
+|?!= or ?<!|Negative Lookbehind - match only if what before doesn't match (engine-dependent)|`(?<!\$)\d+` -> matches `100 in EUR100` not `100 in 100$`|
+|?>...|Once-only/Atomic Group - no backtrack so once matches then locked in even if later part failed|`a(?>bc\|b)c` -> matches `abc` not `abcc`|
+|(?(condition)then)|If-then - if (condition) is true, (then) must match as well|(foo)?bar(?(1)baz) -> optionally matches foo but if matches then baz **MUST** match -> `foobar baz or bar` not `foobar or baz bar`|
+|(?(condition)then\|else)|If-then-else - the same as if-then but with a compulsory else when `if` failed to match|(foo)?bar(?(1)baz\|qux) -> optionally matches `foo`, if foo then requires baz else MUST match qux -> `foorbarbaz` or `barqux`|
+|?#|comment - like how comment in bash works (engine-dependent)|`abc(?# matches abc)def` -> no effect just a plain comment|
