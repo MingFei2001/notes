@@ -31,6 +31,8 @@ Thanks to the kind folks below!
 |*|match 0 or more of the same pattern| a* -> `none` or a, aa ... |
 |?|make pattern optional| colou?r -> color / colour |
 |\||OR operator for regex| a|b -> a OR b|
+|(...)|Capture group - group pattern together for later use as numbered group|`(ab)+` -> `ab or abab` and match can be reference as '\1'|
+|(?...)|Passive Capture group - group pattern but does not capture as numbered group|`(?:ab)+` -> `ab or abab` but no group created|
 
 ## Escape Character
 > if you want to use any char as pattern instead of syntax then you will to escape it
@@ -83,3 +85,9 @@ Thanks to the kind folks below!
 |\t|Horizontal tab space|e.g. -> `name\tage`|
 |\v|Vertical tab space, rarely used as legacy character|meant for legacy printer to move the print head literal down|
 |\f|Form feed a.k.a. Page Break - indicate the start of new page|
+
+## Pattern Modifiers
+> These doesn't match anything but changes the behaviour of regex engine
+
+|Modifiers|description|Remarks|
+|---|---|---|
