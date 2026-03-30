@@ -72,3 +72,14 @@ Thanks to the kind folks below!
 |(?(condition)then)|If-then - if (condition) is true, (then) must match as well|(foo)?bar(?(1)baz) -> optionally matches foo but if matches then baz **MUST** match -> `foobar baz or bar` not `foobar or baz bar`|
 |(?(condition)then\|else)|If-then-else - the same as if-then but with a compulsory else when `if` failed to match|(foo)?bar(?(1)baz\|qux) -> optionally matches `foo`, if foo then requires baz else MUST match qux -> `foorbarbaz` or `barqux`|
 |?#|comment - like how comment in bash works (engine-dependent)|`abc(?# matches abc)def` -> no effect just a plain comment|
+
+## Special Characters
+> Just some special characters, usually non-printable characters, good to know for handling some patterns
+
+|Special Characters|description|Remarks|
+|---|---|---|
+|`\n`|New line - matches a newline character|Common in Unix/Linux text files to indicate new line|
+|`\r`|Carriage Return a.k.a `<CR>` - Old Mac/Windows line ending, move paper on typewriter to far right so the pointer goes left on a typewriter|Windows uses `\r\n` to indicate new line|
+|\t|Horizontal tab space|e.g. -> `name\tage`|
+|\v|Vertical tab space, rarely used as legacy character|meant for legacy printer to move the print head literal down|
+|\f|Form feed a.k.a. Page Break - indicate the start of new page|
