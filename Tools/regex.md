@@ -89,5 +89,19 @@ Thanks to the kind folks below!
 ## Pattern Modifiers
 > These doesn't match anything but changes the behaviour of regex engine
 
-|Modifiers|description|Remarks|
+|Modifiers|description|example|
 |---|---|---|
+|g|Global match - dont stop after the first match, match all occurences|`sed 's/foo/bar/g'` -> go thru all foo and change to bar|
+|i|Case-insensitive - ignore letter case, include both uppercase and lowercase|`sed 's/foo/bar/i'` -> match `foo FOO FoO`|
+|m|Multiline mode - do it over line instead of input|less relevant as most engine processed them one line at a time|
+|s|Single-line (DOTALL) - make `.` match newline too, less common|wildcard `.` also matches `\n` as well|
+|x|Extended/Verbose - allow space and comment inside regex for readability|`\d+ # match number` -> comment works|
+|e|Evaluate replacement **!!DANGEROUS!!** - allow execution of command in regex, |`sed 's/.*/echo &/e' -> will execute `echo` when match|
+|U|Ungreedy - make quantifiers lazy by default, stop at first possible match and only backtrack when needed|`<.*>` in `<tag>content<tag>` will only match the first `<tag>`, the rest will be ignored|
+
+## String Replacement Variables
+> Regex engine remember previous matches, this allow reuse of it mostly for replacement after match
+
+|Modifiers|description|example|
+|---|---|---|
+|$n|nth capture group - allow reuse of content via numbered capture group|you can do `(\w) (\d+)` then `$2 $1` to swap them around|
