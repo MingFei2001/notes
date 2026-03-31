@@ -82,9 +82,9 @@ Thanks to the kind folks below!
 |---|---|---|
 |`\n`|New line - matches a newline character|Common in Unix/Linux text files to indicate new line|
 |`\r`|Carriage Return a.k.a `<CR>` - Old Mac/Windows line ending, move paper on typewriter to far right so the pointer goes left on a typewriter|Windows uses `\r\n` to indicate new line|
-|\t|Horizontal tab space|e.g. -> `name\tage`|
-|\v|Vertical tab space, rarely used as legacy character|meant for legacy printer to move the print head literal down|
-|\f|Form feed a.k.a. Page Break - indicate the start of new page|
+|\t|Horizontal tab space|e.g. -> `name\tage` name \<TAB\> age|
+|\v|Vertical tab space, rarely used|meant for legacy printer to move the print head literal down|
+|\f|Form feed a.k.a. Page Break - indicate start of new page|Mostly historical|
 
 ## Pattern Modifiers
 > These doesn't match anything but changes the behaviour of regex engine
