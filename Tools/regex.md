@@ -31,7 +31,7 @@ Thanks to the kind folks below!
 |{4, }|define range - minimum value and more| a{4,} -> aaaa, aaaaaa ... |
 |+|match 1 or more of the same pattern| a+ -> a, aa, aaa ... |
 |*|match 0 or more of the same pattern| a* -> `none` or a, aa ... |
-|?|make pattern optional| colou?r -> color / colour |
+|?|make pattern optional, often refer as lazy or greedy| colou?r -> color / colour |
 |\||OR operator for regex| a|b -> a OR b|
 |(...)|Capture group - group pattern together for later use as numbered group|`(ab)+` -> `ab or abab` and match can be reference as '\1'|
 |(?...)|Passive Capture group - group pattern but does not capture as numbered group|`(?:ab)+` -> `ab or abab` but no group created|
