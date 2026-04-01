@@ -120,3 +120,50 @@
 |$` (dollar backtick)|Before matched string - everything before $&|`\d+` for `abc123def` -> `$`` will store `abc`|
 |$' (dollar single quote)|After matched string - everything after $&|`\d+` for `abc123def` -> `$'` will store `def`|
 |$+|Last matched capturing group - the last capture group that was matched|`(a)|(b)` for `b` -> `$+` will store `b`|
+
+## Real life Applications and Demonstrations
+> Here are some example from the references, refer to the references for more detailed explaination.
+
+### Email Address
+
+```regex
+^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$
+```
+
++ `^\w+` : from the beginning of the input, match 0 or more word char basically username part of the email
++ `([.-]?\w+)*` : some email addresses uses dot to separate word in name, this allow for optional continuos multiple matching of separate words in username
++ `@` : literal match of `@` char
++ `\w+([.-]?\w+)*` : matching domain name with the same pattern as username
++ `(\.\w{2,3})+$` : matching the Top-Level Domain Name Server (TLD DNS) name with optional country or org code e.g. `.com`, `.edu.sg`
+
+Alternatively,
+```regex
+^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$.
+```
+Applying the same principle, but with different syntax or method e.g. char classes range instead of meta-character 
+
+### Testing with Python
+> Python supports Regex via module re. Python also uses backslash `(\)` for escape sequences (i.e., you need to write `\\` for `\`, `\\d` for `\d`), 
+but it supports raw string in the form of `r'...'`, which ignore the interpretation of escape sequences - great for writing regex.
+
+```python
+# The regex library for Python
+import re
+
+# Search syntax: re.findall(r'condition', 'inputStr') -> outputStr in a list
+# r'...' denotes raw string which ignore escape code, pre-escape for special regex characters
+>>> re.findall(r'[0-9]+','abc123def')
+['123']
+>>> re.findall(r'[0-9]+','abc00123xyz456_0')
+['00123', '456', '0']
+>>> re.findall(r'\d+', 'abc00123xyz456_0')
+['00123', '456', '0']
+
+# Substitute syntax: re.sub(r'condition', replacementStr, inputStr) -> output as string
+>>> re.sub(r'[0-9]+', r'*', 'abc00123xyz456_0')
+'abc*xyz*_*'
+
+# Substitute with count syntax: re.subn(r'condition', replacementStr, inputStr) -> output as tuple of (outputStr, count)
+>>> re.subn(r'[0-9]+', r'*', 'abc00123xyz456_0')
+('abc*xyz*_*', 3)
+```
