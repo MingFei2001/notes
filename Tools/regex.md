@@ -68,6 +68,8 @@ Thanks to the kind folks below!
 |\Z|end of the input, not multiline|aa\Z -> baa, zzaaa, aa|
 |\b|matches word boundaries| \bcat\b -> strictly `cat`, no `cats`|
 |\B|matches non-word boundaries| \Bcat\B -> `concatenate`, strictly no `cat`|
+|\\<|matches start of word, similar to \b|`\<cat` -> `cat` or `catfish`|
+|\\>|matches end of word, similar to \B|`cat\>` -> `cat` or `fatcat`|
 
 ## Assertion
 > Check for condition but do not make modification
