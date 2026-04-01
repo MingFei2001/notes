@@ -105,3 +105,7 @@ Thanks to the kind folks below!
 |Modifiers|description|example|
 |---|---|---|
 |$n|nth capture group - allow reuse of content via numbered capture group|you can do `(\w) (\d+)` then `$2 $1` to swap them around|
+|$&|Entire matched string - hold the entire regex match|`\d+` for `abc123def` -> `$&` will store the matched `123`|
+|$` (dollar backtick)|Before matched string - everything before $&|`\d+` for `abc123def` -> `$`` will store `abc`|
+|$' (dollar single quote)|After matched string - everything after $&|`\d+` for `abc123def` -> `$'` will store `def`|
+|$+|Last matched capturing group - the last capture group that was matched|`(a)|(b)` for `b` -> `$+` will store `b`|
