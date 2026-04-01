@@ -18,6 +18,8 @@ Thanks to the kind folks below!
 |[\^0-9]|Negative match - any char that are not in the list |A, B, C |
 |\xxx|Octal character - allow matching by octal value, legacy usage avoid unless necessary|`\101` -> `A`|
 |\xhh|Hex Character - allow matching by hexadecimal value, suprisingly common|`\41` -> `A`|
+|\uhhhh|4-digit Unicode Character - allow matching by code point|`\u0041` -> `A`|
+|\uhhhhhhhh|8-digit Unicode Character - allow matching of full Unicode range including emoji and rare characters|`\u0001F600` -> `😀`|
 
 ## Occurences
 > Anything that might repeats, i.e. IP address
