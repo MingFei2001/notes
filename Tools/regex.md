@@ -1,7 +1,7 @@
 # Regular Expression
 
 ## Reference
-Thanks to the kind folks below! 
+*Thanks to these kind folks for making easily digestable reference!*
 - [TrustedSEC Regex Cheat Sheet](https://trustedsec.com/blog/regex-cheat-sheet) 
 - [Regular Expressions Cheat Sheet by DaveChild
 ](https://cheatography.com/davechild/cheat-sheets/regular-expressions/)
