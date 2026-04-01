@@ -5,6 +5,7 @@ Thanks to the kind folks below!
 - [TrustedSEC Regex Cheat Sheet](https://trustedsec.com/blog/regex-cheat-sheet) 
 - [Regular Expressions Cheat Sheet by DaveChild
 ](https://cheatography.com/davechild/cheat-sheets/regular-expressions/)
+- [Yet another insignificant programming notes](https://www3.ntu.edu.sg/home/ehchua/programming/howto/Regexe.html)
 
 ## Character Classes
 > Basic alphanumeric matching.
