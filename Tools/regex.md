@@ -121,8 +121,28 @@
 |$' (dollar single quote)|After matched string - everything after $&|`\d+` for `abc123def` -> `$'` will store `def`|
 |$+|Last matched capturing group - the last capture group that was matched|`(a)|(b)` for `b` -> `$+` will store `b`|
 
+---
+
 ## Real life Applications and Demonstrations
 > Here are some example from the references, refer to the references for more detailed explaination.
+
+### Image Filename
+> Image filename are pretty standard as they usually only involve filename + filetype/extension
+
+```regex
+^[\w.\- ]+\.(gif|png|jpg|jpeg)$
+```
+
++ `^[\w.\- ]+` : from the beginning of the input, match minimum 1 word char or literal dot, hyphen and space, basically the filename
++ `\.` : match literal dot as separate for filename and file extension
++ `(gif|png|jpg|jpeg)` : match one of the image file extension
+
+This requires manual tuning if you need to match more than 4 types of image file extension e.g. `.HEIC` or `.webp`. 
+The modifier `i` can be invoked for specific type of regex engines to do case-insensitive matching.
+
+*You can also use this for non-image filename by changing whats in the last parenthesis.*
+
+**P/S: Matching \<TAB\> is a bad idea as they are invisible to human eye so it might ends up as debugging and security hell.**
 
 ### Email Address
 
