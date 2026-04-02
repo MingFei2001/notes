@@ -145,6 +145,7 @@ The modifier `i` can be invoked for specific type of regex engines to do case-in
 **P/S: Matching \<TAB\> is a bad idea as they are invisible to human eye so it might ends up as debugging and security hell.**
 
 ### Email Address
+> One of the most common use case in web programming and data entries
 
 ```regex
 ^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$
@@ -160,7 +161,9 @@ Alternatively,
 ```regex
 ^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$.
 ```
-Applying the same principle, but with different syntax or method e.g. char classes range instead of meta-character 
+Applying the same principle, but with different syntax or method e.g. char classes range instead of meta-character.
+
+There are endless arguements on the internet regarding which regex is the best email regex so you can siphon all of them and try not to contribute to the problem.
 
 ### Testing with Python
 > Python supports Regex via module re. Python also uses backslash `(\)` for escape sequences (i.e., you need to write `\\` for `\`, `\\d` for `\d`), 
