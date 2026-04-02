@@ -185,6 +185,8 @@ import re
 # Substitute syntax: re.sub(r'condition', replacementStr, inputStr) -> output as string
 >>> re.sub(r'[0-9]+', r'*', 'abc00123xyz456_0')
 'abc*xyz*_*'
+>>> re.sub(r'^(\S+)\s+(\S+)$', r'\2 \1', 'apple orange')
+'orange apple'
 
 # Substitute with count syntax: re.subn(r'condition', replacementStr, inputStr) -> output as tuple of (outputStr, count)
 >>> re.subn(r'[0-9]+', r'*', 'abc00123xyz456_0')
