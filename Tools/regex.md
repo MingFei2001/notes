@@ -58,6 +58,26 @@
 |\w|matches word, same as [A-Za-z0-9_]|anything alphanumeric and underscore|
 |\W|reverse of \w|matches spaces, punctuation, symbols, emojis|
 
+## POSIX Character Classes
+> Named (POSIX) classes of characters are pre-defined within bracket expressions (double bracket in most cases).
+
+|regex|description|example|
+|---|---|---|
+|`[[:alnum:]]`|alphanumeric characters - similar to `[a-z0-9A-Z]`|`abc123def`|
+|`[[:alpha:]]`|Alphabets - letters, similar to `[a-zA-Z]`|`abc` `def` not `abc123`|
+|`[[:digit:]]`|Numerical characters - numbers, similar to `[0-9]`|`123` not `abc`| 
+|`[[:xdigit:]]`|Hexadecimal digits|`1A3f` `deadBEEF`|
+|`[[:lower:]]`|Lowercase alphabets only - similar to [a-z], locale-dependent|`abc`|
+|`[[:upper:]]`|Uppercase alphabets only - similar to [A-Z], locale-dependent|`ABC`|
+|`[[:space:]]`|Any whitespace characters - similar to `\s`|space, `\t`, `\n`, `\r`, `\f`|
+|`[[:blank:]]`|horizontal whitespace - space and tab only|space, `\t`|
+|`[[:cntrl:]]`|Control characters - non-printable characters|`\n`, `\t`, `\r`|
+|`[[:graph:]]`|Visible printable characters - all printable char except space|`Hello!` not `Hello !`|
+|`[[:print:]]`|Any printable characters including space|almost all normal text|
+|`[[:punct:]]`|Punctuation only - printables that are not letters or digits|`! @ # $ % & * ( ) - _ = + [ ] { }`|
+
+**P/S: These are primary used in CLI tools e.g. `grep`, `sed` or `awk` but not programming language e.g. `JavaScript`.**
+
 ## Position Anchors
 > does not match character but position
 
