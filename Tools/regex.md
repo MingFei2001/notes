@@ -174,7 +174,7 @@ but it supports raw string in the form of `r'...'`, which ignore the interpretat
 import re
 
 # Search syntax: re.findall(r'condition', 'inputStr') -> outputStr in a list
-# r'...' denotes raw string which ignore escape code, pre-escape for special regex characters
+# r'...' denotes raw string which remove the need for extra escape for regex parsing 
 >>> re.findall(r'[0-9]+','abc123def')
 ['123']
 >>> re.findall(r'[0-9]+','abc00123xyz456_0')
