@@ -20,3 +20,6 @@
 
 7. [Cargo-deb](https://github.com/kornelski/cargo-deb)
   - turn rust packages into installable deb packages
+
+8. [Wiremix](https://github.com/tsowell/wiremix)
+  - Simple TUI audio mixer for PipeWire
