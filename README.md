@@ -8,6 +8,7 @@ This repository contains a collection of practical notes and guides organized by
 - [Setting up Tiny Alpine FS with Copyparty and Nginx](Operating_Systems/tinyalpinefs.md)
 - [Securing a Debian Cloud Machine](Operating_Systems/debian-secure.md)
 - [Copyparty Setup Guide](Operating_Systems/copyparty/copyparty.md)
+- [Sudo — Privilege Escalation Utility](Operating_Systems/sudo.md)
 
 ### Networking
 - [Secure Samba (SMB) Server on Linode](Networking/smb-guide.md)
