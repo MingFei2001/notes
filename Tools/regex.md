@@ -222,4 +222,14 @@ import re
 # Substitute with count syntax: re.subn(r'condition', replacementStr, inputStr) -> output as tuple of (outputStr, count)
 >>> re.subn(r'[0-9]+', r'*', 'abc00123xyz456_0')
 ('abc*xyz*_*', 3)
+
+# Multiline mode: dealing with whitespace characters
+# Find any non-whitespace character. which will exclude \n
+>>> p1 = re.compile(r'\A.+\Z', re.MULTILINE)
+>>> p1.findall(r'testing\ntesting')
+['testing', 'testing']
+# Find any non-whitespace character but include \n
+>>> p2 = re.compile(r'\A.+\n\Z', re.MULTILINE)
+>>> p2.findall(r'testing\ntesting')
+['testing\ntesting']
 ```
