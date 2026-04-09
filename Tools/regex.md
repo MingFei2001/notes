@@ -58,6 +58,8 @@
 |\w|matches word, same as [A-Za-z0-9_]|anything alphanumeric and underscore|
 |\W|reverse of \w|matches spaces, punctuation, symbols, emojis|
 
+*side note: The metacharacters \w, \W, (word and non-word character), \b, \B (word and non-word boundary) recognize Unicode characters.*
+
 ## POSIX Character Classes
 > Named (POSIX) classes of characters are pre-defined within bracket expressions (double bracket in most cases).
 
