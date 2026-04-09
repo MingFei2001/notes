@@ -187,6 +187,15 @@ Applying the same principle, but with different syntax or method e.g. char class
 
 There are endless arguements on the internet regarding which regex is the best email regex so you can siphon all of them and try not to contribute to the problem.
 
+
+#### Email in AngularJS
+> *side note: this is how you match email in AngularJS:*
+```regex
+^(?=.{1,254}$)(?=.{1,64}@)[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+(\.[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+)*@[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?(\.[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?)*$
+```
+
+This regex consist of 2 lookahead assertions. The first positive lookahead patterns `^(?=.{1,254}$)` sets the maximum length to 254 characters. The second positive lookahead `^(?=.{1,64}@)` sets maximum of 64 characters before the '@' sign for the username.
+
 ### Testing with Python
 > Python supports Regex via module re. Python also uses backslash `(\)` for escape sequences (i.e., you need to write `\\` for `\`, `\\d` for `\d`), 
 but it supports raw string in the form of `r'...'`, which ignore the interpretation of escape sequences - great for writing regex.
