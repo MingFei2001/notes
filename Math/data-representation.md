@@ -100,7 +100,7 @@ A3C5H = 1010 (A/10) 0011 (3) 1100 (C/12) 0101 (5) B
 ```
 
 #### Base r to Decimal (Base 10)
-Knowing `d*10^(n-1)` and expand it to the entire group:
+Knowing `d*r^(n-1)` and expand it to the entire group:
 
 ```text
 A1C2H = (A)10×16^3 + 1×16^2 + (C)12×16^1 + 2x16^0
