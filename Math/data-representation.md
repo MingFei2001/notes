@@ -157,3 +157,33 @@ Fractional => `.6875`
 ```
 
 - Now combine both you get `10010.1011B`
+
+The same applies to other base system.
+
+## Computer Memory & Data representation
+> Data can be represented in many forms but in computer memory it is still zeros and ones.
+
+Computer use fixed number of bits to represent data in memory. For example:
+- you can use 3 bits to represent `0` to `7`, `8881` to `8888` or char `A` to `H`,
+- you can use 3 bits (8 in decimal) to represent 8 object e.g. `orange`, `apple`, `banana`
+- you can use `8-bit`, `16-bit`, `32-bit` or `64-bit` to represent different length of integers
+- you can represent different schemes of integer with the same length e.g. `unsigned` vs `signed`
+    - unsigned: range of `0` - `255`
+    - signed: range of -128 to 127
+    - both are still the same length: 256 distinct numbers
+
+It is still zeros and ones at the end of the day, so it is up to the program to decide how the patterns are interpreted, but industrial standard and convention exist. Once the scheme is decided, constraits e.g. precision and range will be imposed accordingly.
+
+### Case study: Egyptian Hieroglphys and Encoding Schema
+Egyptian hieroglyphs were used by the ancient Egyptians since 4000BC. But since 500AD, no one could read the ancient Egyptian hieroglyphs, until the re-discovery of the Rosette Stone in 1799 by Napoleon's troop (during Napoleon's Egyptian invasion) near the town of Rashid (Rosetta) in the Nile Delta.
+
+The Rosetta Stone is inscribed with a decree in 196BC on behalf of King Ptolemy V. 
+
+The decree appears in three scripts: 
+- the upper text is Ancient Egyptian hieroglyphs
+- the middle portion Demotic script
+- the lowest Ancient Greek
+
+Because it presents essentially the same text in all three scripts, and Ancient Greek could still be understood, it provided the key to the decipherment of the Egyptian hieroglyphs.
+
+The moral of the story is unless you know the encoding scheme, there is no way that you can decode the data.
