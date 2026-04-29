@@ -1,14 +1,16 @@
-# Numbering System
+# Data Representation
+
+## References
+- [Yet another insignificant programming note - A Tutorial on Data Representation](https_www3.ntu.edu.sg/?url=https%3A%2F%2Fwww3.ntu.edu.sg%2Fhome%2Fehchua%2Fprogramming%2Fjava%2FDataRepresentation.html)
+
+## Number Systems
 Multiple number systems exist for different purposes.
 
 - Humans use decimal (base 10) and duodecimal (base 12) because we count with 10 fingers and sometimes 2 big toes.
 - Computers use binary (base 2) since transistors have two states: on or off.
 - Hexadecimal (base 16) and octal (base 8) are used in computing as compact forms to represent binary numbers.
 
-## References
-- [Yet another insignificant programming note - A Tutorial on Data Representation](https_www3.ntu.edu.sg/?url=https%3A%2F%2Fwww3.ntu.edu.sg%2Fhome%2Fehchua%2Fprogramming%2Fjava%2FDataRepresentation.html)
-
-## Decimal (base 10)
+### Decimal (base 10)
 
 The decimal number system, also known as base 10, uses 10 symbols:
 
@@ -27,7 +29,7 @@ It uses positional notation:
      = 1000 + 200 + 30 + 4
 ```
 
-## Binary (base 2)
+### Binary (base 2)
 
 The binary number system uses two symbols (bits): `0` and `1`
 
@@ -50,7 +52,7 @@ Example:
 
 Computers use the binary (base 2) number system because they are built from digital components called transistors, which operate in two states: on and off. These states correspond to the presence or absence of an electrical charge (or electron) in the silicon circuitry, making binary representation natural for computers.
 
-## Hexadecimal (Base 16)
+### Hexadecimal (Base 16)
 
 Hexadecimal number system uses 16 symbols:
 ```text
@@ -76,10 +78,10 @@ A3EH = A00H + 30H + EH
 - Hexadecimal serves as a compact representation of binary bits for this reason.
 - Each hexadecimal digit is equivalent to 4 bits, or half a byte.
 
-## Conversion between number systems
+### Conversion between number systems
 Here are some math to convert them.
 
-### Hexadecimal (Base 16) to Binary (Base 2)
+#### Hexadecimal (Base 16) to Binary (Base 2)
 Replace each hex digit into equivalent of 4 binary bits
 
 ```text
@@ -87,7 +89,7 @@ A3C5H = 1010 (A/10) 0011 (3) 1100 (C/12) 0101 (5) B
 102AH = 0001 (1) 0000 (0) 0010 (2) 1010 (A/10) B
 ```
 
-### Binary (Base 2) to Hexadecimal (Base 16)
+#### Binary (Base 2) to Hexadecimal (Base 16)
 - Split them into 4 from right to left, add 0 to the left as padding when necessary
 - then convert each group to an equivalent of Hex digit
 - basically reverse operation of `Hex` to `Bin` conversion
@@ -97,7 +99,7 @@ A3C5H = 1010 (A/10) 0011 (3) 1100 (C/12) 0101 (5) B
 10001011001011B = 0010 (2) 0010 (2) 1100 (C/12) 1011 (B/11) B = 22CBH
 ```
 
-### Base r to Decimal (Base 10)
+#### Base r to Decimal (Base 10)
 Knowing `d*10^(n-1)` and expand it to the entire group:
 
 ```text
@@ -108,7 +110,7 @@ A1C2H = (A)10×16^3 + 1×16^2 + (C)12×16^1 + 2x16^0
        = 16 + 4 + 2 = 22
 ```
 
-### Decimal to Base r
+#### Decimal to Base r
 Use repeated division/remainder. For example:
 ```bash
 # To convert 261 to hex
@@ -121,4 +123,4 @@ Collect all remainder in reverse order,
 
 The same applies to any 2 base system.
 
-###
+####
