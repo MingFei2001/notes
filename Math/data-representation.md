@@ -123,4 +123,37 @@ Collect all remainder in reverse order,
 
 The same applies to any 2 base system.
 
-####
+#### Fractioned Numbers
+> You can still convert even when the number is a float
+
+For example 
+
+- first split the integral and the fractional part
+```text
+18.6875 D
+Integral => `18`
+Fractional => `.6875`
+```
+
+- Divide the integral with base r, collect the remainder in reverse order
+```text
+18/2 => quotinent=9; remainder=0
+9/2  => quotinent=4; remainder=1
+4/2  => quotinent=2; remainder=0
+2/2  => quotinent=1; remainder=0
+1/2  => quotinent=0; remainder=1 (stop at quotinent 0)
+
+18D == 10010B
+```
+
+- Multiply the fractional with base r, collect the integral part
+```text
+.6875*2 = 1.375 => integral is 1
+.375*2  = 0.75  => integral is 0
+.75*2   = 1.5   => integral is 1
+.5*2    = 1.0   => integral is 0 (stop at 0 fractional part)
+
+.6875D ==.1011B
+```
+
+- Now combine both you get `10010.1011B`
