@@ -1,20 +1,20 @@
 # NGINX: Internal Port Forwarding & Reverse Proxy
 
-## what is nginx
+## What is nginx
 
-nginx is a high-performance web server and reverse proxy, known for handling many concurrent connections with low memory overhead. Common uses include serving static files, terminating TLS, load balancing, and acting as a reverse proxy in front of application servers.
+Nginx is a high-performance web server and reverse proxy, known for handling many concurrent connections with low memory overhead. Common uses include serving static files, terminating TLS, load balancing, and acting as a reverse proxy in front of application servers.
 
 In this note, nginx is used purely as a reverse proxy. The goal is to route traffic from a public-facing port (e.g. 80) to a backend service running on a non-standard local port on the same machine, so end users hit a clean URL without specifying the port.
 
-## prerequisites, file locations, and preparations
+## Before you start
 
-### prerequisites
+### Prerequisites
 
 - nginx installed and running
 - a backend service already listening on a local port
 - sudo access
 
-### file locations (debian / ubuntu layout)
+### Main configuration directory
 
 - main config: `/etc/nginx/nginx.conf`
 - drop-in site configs: `/etc/nginx/conf.d/*.conf`
@@ -22,7 +22,7 @@ In this note, nginx is used purely as a reverse proxy. The goal is to route traf
 
 The main `nginx.conf` includes both directories inside its `http {}` block. Any `.conf` file placed in `conf.d/` is auto-loaded on reload.
 
-### preparations
+### Preparations
 
 1. confirm the backend is reachable locally
 
