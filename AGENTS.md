@@ -38,11 +38,11 @@ This repository is dedicated to structured markdown notes. Agents must strictly 
   3. **Code**:
      - Inline: `` `example` ``
      - Multiline:
-       ```markdown
+       ````markdown
        ```
        block of code
        ```
-       ```
+       ````
 
 ### Rule 4: Repository Style Rules
 - **File Names**:
@@ -52,3 +52,12 @@ This repository is dedicated to structured markdown notes. Agents must strictly 
     - 🚫 Avoid: `exampleNotes.md`, `Example_Notes.md`
 - Use blank lines between sections and avoid long paragraphs:
   - Break text into readable chunks, with one idea per paragraph.
+
+### Rule 5: Handling Ambiguity
+- If a request is unclear, incomplete, or could be interpreted multiple ways, ask one clarifying question before proceeding.
+- Do not make assumptions and act — pause and confirm.
+
+### Rule 6: Use Official and Current Sources
+- Always refer to official documentation when answering queries.
+- Use the latest available source — online documentation or user-provided input takes precedence.
+- Do not rely on cached or training-data knowledge when a current source is accessible.
