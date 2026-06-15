@@ -14,6 +14,7 @@ Practical setup and hardening notes for Linux systems and self-hosted services.
 
 - [Setting up Tiny Alpine FS with Copyparty and Nginx](Operating_Systems/tinyalpinefs.md)
 - [Securing a Debian Cloud Machine](Operating_Systems/debian-secure.md)
+- [Sysctl Kernel Parameter Optimization](Operating_Systems/sysctl-kernel-optimization.md)
 - [Copyparty Setup Guide](Operating_Systems/copyparty/copyparty.md)
 - [Sudo — Privilege Escalation Utility](Operating_Systems/sudo.md)
 
