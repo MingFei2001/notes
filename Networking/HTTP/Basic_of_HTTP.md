@@ -93,7 +93,7 @@ To break down the above request:
   - server will use this to identify the client and respond accordingly
   - e.g. compatibility/mobile detection/bot detection/analytics
 
-  When the request message reaches the server, the server will parse the request and respond with either one of the following actions:
+When the request message reaches the server, the server will parse the request and respond with either one of the following actions:
 
 1. Interpret the request received and map the request to a resource on the server, then returns the resource to the client
 2. Interpret the request received, run the appropriate server-side logic, and return the output to the client
@@ -124,6 +124,37 @@ To break down the response header:
 2. `Server: Apache/2.2.14 (Win32)`
   - identifies the server software and version
   - equivalent to `User-Agent` on the client side
-3. 
+3. `ETag: "10000000565a5-2c-3e94b66c2e680"`
+  - entity tag, a unique fingerprint for this version of the resource
+  - also used for caching and conditional requests
+4. `Accept-Ranges: bytes` & `Content-Length: 44`
+  - `Accept-Ranges: bytes` indicates the server supports partial content requests
+  - `Content-Length: 44` indicates the response body is 44 bytes long
+  - useful for resuming partial downloads or video seeking
+5. `Content-Type: text/html`
+  - indicates the response body is HTML content
+  - used by browsers to determine how to display the response
 
-*side note: the X in `X-Pad` indicates this is a non-standard header, the example shows a known Apache workaround for an old Netscape bug.
+A blank line separates headers from the body as required by the HTTP protocol. After the blank line is what we refer to the response body, which is the actual payload being sent - 44 bytes, matches the `Content-Length` header.
+
+*side note: the X in `X-Pad` indicates this is a non-standard header, the example shows a known Apache workaround for an old Netscape bug.*
+
+The browser receives the response, interprets the message and display the content of the response body according to the media type of the response specified in the `Content-Type` header.
+
+#### MIME Types
+> MIME stands for **Multipurpose Internet Mail Extensions**, originally designed for email attachments, HTTP adopted it to label content types.
+
+The format for MIME types is always:
+```
+type/subtype
+```
+
+Common types include the following:
+
+- text/html — HTML document
+- text/plain — plain text
+- image/jpeg — JPEG image
+- image/gif — GIF image
+- application/json — JSON data
+- application/pdf — PDF file
+- video/mp4 — MP4 video
