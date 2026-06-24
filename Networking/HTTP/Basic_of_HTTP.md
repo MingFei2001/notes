@@ -141,6 +141,10 @@ A blank line separates headers from the body as required by the HTTP protocol. A
 
 The browser receives the response, interprets the message and display the content of the response body according to the media type of the response specified in the `Content-Type` header.
 
+During the web server idle state, the server awaits and listening to ip addresses and ports specified in configuration for incoming requests. When a request arrived, the server reads the header, runs through the rules and applies the appropriate action as specified in the rules.
+
+Web server software are usually not hardcoded - which means server admin can decide on what ports and which ip addresses to listen on, which directory to serve files from and who can access which resources using rules defined in the configuration. The server simply executes based on what the rules says.
+
 #### MIME Types
 > MIME stands for **Multipurpose Internet Mail Extensions**, originally designed for email attachments, HTTP adopted it to label content types.
 
