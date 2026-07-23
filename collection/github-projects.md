@@ -23,3 +23,6 @@
 
 8. [Wiremix](https://github.com/tsowell/wiremix)
   - Simple TUI audio mixer for PipeWire
+
+9. [Superfile](https://github.com/yorukot/superfile)
+  - Pretty fancy and modern terminal file manager
