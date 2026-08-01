@@ -26,3 +26,6 @@
 
 9. [Superfile](https://github.com/yorukot/superfile)
   - Pretty fancy and modern terminal file manager
+
+10. [Defuse](https://github.com/shonebinu/Defuse)
+  - GTK4 application for removing image backgrounds locally
